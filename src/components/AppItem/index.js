@@ -1,14 +1,15 @@
 import './index.css'
 
+const AppItem = props => {
+  const {appDetails} = props
+  const {appName, imageUrl} = appDetails
 
-const AppItem = (props) => {
-    const {appsList} = props
-    const {appId,appName,imageUrl,category} = appsList
-    return(
-        <div>
-            <h1>AppItem</h1>
-        </div>
-    )
+  return (
+    <li className="app-item">
+      <img className="app-image" src={imageUrl} alt={appName} />
+      <p className="app-name">{appName}</p>
+    </li>
+  )
 }
 
 export default AppItem
